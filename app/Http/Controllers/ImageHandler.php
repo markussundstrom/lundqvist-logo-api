@@ -13,23 +13,24 @@ class ImageHandler extends Controller
 {
     /*******************************************************
      * Supply an image through http request, the image is returned branded with logo and optional text
+     * API is reached through <host>/images
      *
      * Recognized options:
      * =====================
      * width    <width>        
-     * Desired width in pixels of resulting image as a positive integer (max 16384)
+     * Width in pixels of resulting image as a positive integer (max 16384)
      *
      * height   <height>       
-     * Desired height in pixels of resulting image as a positive integer (max 16384)
+     * Height in pixels of resulting image as a positive integer (max 16384)
      * 
      * If width and height are empty, original image size will be used. 
      * Both width and height need to be either set or empty.
      * 
      * logocolor    white | black   
-     * Color of logo. Defaults to black if value invalid or not set.
+     * Color of logo. Defaults to black if value is invalid or not set.
      * 
      * logoposition top-left | top-right | bottom-left | bottom-right 
-     * Position of logo. Defaults to bottom right if calue invalid or not set.
+     * Position of logo. Defaults to bottom right if value is invalid or not set.
      *
      * text <text>         
      * Optional text to add to center of image
