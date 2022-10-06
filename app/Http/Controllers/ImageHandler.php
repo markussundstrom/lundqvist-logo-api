@@ -73,7 +73,7 @@ class ImageHandler extends Controller
             $filteropts = array('options' => array('min_range' => 1, 'max_range' => 16384));
             
             if (filter_var($request->width, FILTER_VALIDATE_INT, $filteropts) && 
-                filter_var($request->width, FILTER_VALIDATE_INT, $filteropts)) {
+                filter_var($request->height, FILTER_VALIDATE_INT, $filteropts)) {
                 $image->fit($request->width, $request->height);
             } else {
                 return response()->json(['error' => 'width and height need to be positive integers of reasonable size'], 400);
